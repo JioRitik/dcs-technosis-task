@@ -1,9 +1,10 @@
 import React, { Suspense } from 'react'
 import { Routes, Route } from 'react-router-dom'
 import { AuthProvider } from './contexts/AuthContext'
+
+import AdminRoute from './components/AdminRoute'
 import LoadingSpinner from './components/LoadingSpinner'
 import ProtectedRoute from './components/ProtectedRoute'
-import AdminRoute from './components/AdminRoute'
 
 // Lazy loading components for better performance
 const Home = React.lazy(() => import('./pages/Home'))
