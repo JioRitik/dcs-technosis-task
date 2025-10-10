@@ -3,7 +3,7 @@ import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { useAuth } from '../../contexts/AuthContext'
 import { useQuery, useMutation, useQueryClient } from '@tanstack/react-query'
-import api from '../../services/api'
+import api from '../../Services/api'
 import LoadingSpinner from '../../components/LoadingSpinner'
 
 const AdminForms = () => {
@@ -66,7 +66,7 @@ const AdminForms = () => {
               <span className="text-gray-700">Admin: {user?.name}</span>
               <button
                 onClick={logout}
-                className="text-gray-500 hover:text-gray-700 px-3 py-2 rounded-md text-sm font-medium"
+                className="uppercase text-white-500 hover:text-gray-700 px-3 py-2 rounded-md text-sm font-medium"
               >
                 Sign out
               </button>
@@ -263,7 +263,7 @@ const CreateFormModal = ({ onClose }) => {
                 required
                 value={formData.title}
                 onChange={(e) => setFormData(prev => ({ ...prev, title: e.target.value }))}
-                className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500"
+                className="text-black mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500"
               />
             </div>
 
@@ -276,7 +276,7 @@ const CreateFormModal = ({ onClose }) => {
                 step="0.01"
                 value={formData.amount}
                 onChange={(e) => setFormData(prev => ({ ...prev, amount: e.target.value }))}
-                className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500"
+                className="text-black mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500"
               />
             </div>
 
@@ -287,7 +287,7 @@ const CreateFormModal = ({ onClose }) => {
                 required
                 value={formData.start_date}
                 onChange={(e) => setFormData(prev => ({ ...prev, start_date: e.target.value }))}
-                className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500"
+                className="text-black mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500"
               />
             </div>
 
@@ -298,7 +298,7 @@ const CreateFormModal = ({ onClose }) => {
                 required
                 value={formData.end_date}
                 onChange={(e) => setFormData(prev => ({ ...prev, end_date: e.target.value }))}
-                className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500"
+                className="text-black mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500"
               />
             </div>
           </div>
@@ -310,7 +310,7 @@ const CreateFormModal = ({ onClose }) => {
               required
               value={formData.description}
               onChange={(e) => setFormData(prev => ({ ...prev, description: e.target.value }))}
-              className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500"
+              className="text-black mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500"
             />
           </div>
 
@@ -321,7 +321,7 @@ const CreateFormModal = ({ onClose }) => {
               min="1"
               value={formData.max_submissions}
               onChange={(e) => setFormData(prev => ({ ...prev, max_submissions: e.target.value }))}
-              className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500"
+              className="text-black mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500"
             />
           </div>
 
@@ -348,7 +348,7 @@ const CreateFormModal = ({ onClose }) => {
                         type="text"
                         value={field.name}
                         onChange={(e) => updateField(index, { ...field, name: e.target.value })}
-                        className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 text-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500"
+                        className="text-black mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 text-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500"
                       />
                     </div>
                     <div>
@@ -356,7 +356,7 @@ const CreateFormModal = ({ onClose }) => {
                       <select
                         value={field.type}
                         onChange={(e) => updateField(index, { ...field, type: e.target.value })}
-                        className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 text-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500"
+                        className="text-black mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 text-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500"
                       >
                         <option value="text">Text</option>
                         <option value="email">Email</option>
@@ -372,7 +372,7 @@ const CreateFormModal = ({ onClose }) => {
                         type="text"
                         value={field.label}
                         onChange={(e) => updateField(index, { ...field, label: e.target.value })}
-                        className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 text-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500"
+                        className="text-black mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 text-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500"
                       />
                     </div>
                     <div className="flex items-center justify-between">

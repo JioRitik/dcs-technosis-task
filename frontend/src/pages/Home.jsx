@@ -22,7 +22,7 @@ const Home = () => {
                   <span className="text-gray-700">Welcome, {user?.name}</span>
                   <Link
                     to="/dashboard"
-                    className="bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-700 transition duration-200"
+                    className="bg-indigo-600 text-white text-opacity-75 px-4 py-2 rounded-md hover:bg-indigo-700 transition duration-200"
                   >
                     Dashboard
                   </Link>

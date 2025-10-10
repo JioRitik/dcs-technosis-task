@@ -54,7 +54,7 @@ const FormRenderer = ({ form, onSubmit, loading = false }) => {
     const commonProps = {
       ...register(field.name),
       id: field.name,
-      className: `mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm ${
+      className: `text-black mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm ${
         errors[field.name] ? 'border-red-300' : ''
       }`
     }
@@ -66,6 +66,7 @@ const FormRenderer = ({ form, onSubmit, loading = false }) => {
           <input
             type={field.type}
             placeholder={field.placeholder}
+            className='text-black'
             {...commonProps}
           />
         )
@@ -75,6 +76,7 @@ const FormRenderer = ({ form, onSubmit, loading = false }) => {
           <input
             type="number"
             placeholder={field.placeholder}
+            className='text-black'
             {...commonProps}
           />
         )
@@ -83,6 +85,7 @@ const FormRenderer = ({ form, onSubmit, loading = false }) => {
         return (
           <input
             type="date"
+            className='text-black'
             {...commonProps}
           />
         )

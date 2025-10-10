@@ -6,7 +6,7 @@ import { useRazorpayPayment, useVerifyRazorpayPayment, useStripePayment } from '
 const stripePromise = loadStripe(import.meta.env.VITE_STRIPE_PUBLISHABLE_KEY)
 
 const PaymentGateway = ({ submission, onSuccess }) => {
-  const [selectedGateway, setSelectedGateway] = useState('razorpay')
+  const [selectedGateway, setSelectedGateway] = useState('stripe')
   const [processing, setProcessing] = useState(false)
   
   const razorpayMutation = useRazorpayPayment()
@@ -65,9 +65,9 @@ const PaymentGateway = ({ submission, onSuccess }) => {
               value="razorpay"
               checked={selectedGateway === 'razorpay'}
               onChange={(e) => setSelectedGateway(e.target.value)}
-              className="mr-2"
+              className="text-black mr-2"
             />
-            <span>Razorpay (UPI, Cards, NetBanking)</span>
+            <span className='text-black'>Razorpay (UPI, Cards, NetBanking)</span>
           </label>
         </div>
         
@@ -81,7 +81,7 @@ const PaymentGateway = ({ submission, onSuccess }) => {
               onChange={(e) => setSelectedGateway(e.target.value)}
               className="mr-2"
             />
-            <span>Stripe (International Cards)</span>
+            <span className='text-black'>Stripe (International Cards)</span>
           </label>
         </div>
       </div>

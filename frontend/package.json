@@ -12,6 +12,7 @@
   "dependencies": {
     "@headlessui/react": "^2.2.9",
     "@heroicons/react": "^2.2.0",
+    "@hookform/resolvers": "^5.2.2",
     "@stripe/react-stripe-js": "^5.0.0",
     "@stripe/stripe-js": "^8.0.0",
     "@tailwindcss/vite": "^4.1.14",
@@ -21,7 +22,8 @@
     "react-dom": "^19.1.1",
     "react-hook-form": "^7.64.0",
     "react-router-dom": "^7.9.3",
-    "tailwindcss": "^4.1.14"
+    "tailwindcss": "^4.1.14",
+    "yup": "^1.7.1"
   },
   "devDependencies": {
     "@eslint/js": "^9.36.0",

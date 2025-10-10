@@ -1,6 +1,6 @@
 import { useState, useCallback } from 'react'
 import { useQuery, useMutation, useQueryClient } from '@tanstack/react-query'
-import api from '../services/api'
+import api from '../Services/api'
 
 export const useForms = () => {
   return useQuery({

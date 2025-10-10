@@ -99,7 +99,7 @@ const FormDetail = () => {
               <span className="text-gray-700">Welcome, {user?.name}</span>
               <button
                 onClick={logout}
-                className="text-gray-500 hover:text-gray-700 px-3 py-2 rounded-md text-sm font-medium"
+                className="uppercase text-white-500 hover:text-gray-700 px-3 py-2 rounded-md text-sm font-medium"
               >
                 Sign out
               </button>

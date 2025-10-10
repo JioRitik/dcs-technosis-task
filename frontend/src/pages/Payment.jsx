@@ -3,9 +3,9 @@ import React, { useState } from 'react'
 import { useParams, Link, useNavigate } from 'react-router-dom'
 import { useAuth } from '../contexts/AuthContext'
 import { useQuery } from '@tanstack/react-query'
-import api from '../services/api'
 import PaymentGateway from '../components/PaymentGateway'
 import LoadingSpinner from '../components/LoadingSpinner'
+import api from '../Services/api'
 
 const Payment = () => {
   const { submissionId } = useParams()
@@ -122,7 +122,7 @@ const Payment = () => {
               <span className="text-gray-700">Welcome, {user?.name}</span>
               <button
                 onClick={logout}
-                className="text-gray-500 hover:text-gray-700 px-3 py-2 rounded-md text-sm font-medium"
+                className="uppercase text-white-500 hover:text-gray-700 px-3 py-2 rounded-md text-sm font-medium"
               >
                 Sign out
               </button>

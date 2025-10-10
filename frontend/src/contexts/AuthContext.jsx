@@ -1,5 +1,5 @@
 import React, { createContext, useContext, useReducer, useEffect } from 'react'
-
+import api from '../Services/api'
 
 const AuthContext = createContext()
 
@@ -46,7 +46,10 @@ export const AuthProvider = ({ children }) => {
 
     const login = async (credentials) => {
         try {
+            console.log("login func AuthContext ========= ", credentials);
+            
             const response = await api.post('/login', credentials)
+            console.log("login func res ========= ", response);
             const { user, token } = response.data
 
             localStorage.setItem('token', token)
@@ -57,6 +60,7 @@ export const AuthProvider = ({ children }) => {
 
             return { success: true }
         } catch (error) {
+            console.log("login func error =====",error);
             return {
                 success: false,
                 message: error.response?.data?.message || 'Login failed'

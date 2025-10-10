@@ -37,6 +37,7 @@ const Login = () => {
     setError('')
 
     const result = await login(data)
+    console.log('login submit result ==========' , result);
     
     if (result.success) {
       const from = location.state?.from?.pathname || '/dashboard'
