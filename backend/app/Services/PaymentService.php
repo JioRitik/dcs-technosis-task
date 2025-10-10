@@ -5,6 +5,7 @@ namespace App\Services;
 use App\Models\Payment;
 use App\Models\Submission;
 use Exception;
+use Stripe;
 
 class PaymentService
 {
@@ -70,7 +71,7 @@ class PaymentService
 
     public function processStripePayment(Submission $submission, string $paymentMethodId): Payment
     {
-        \Stripe\Stripe::setApiKey(config('services.stripe.secret'));
+        \Stripe\Stripe::setApiKey(env('STRIPE_SECRET'));
 
         try {
             $paymentIntent = \Stripe\PaymentIntent::create([
