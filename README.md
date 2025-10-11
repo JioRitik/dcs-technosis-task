@@ -143,6 +143,6 @@ This project is created for **DCS Technosis Task** and is open for educational a
 ---
 
 ### Developed by
-**Ritik Gwaal**  
+**Ritik Gwala**  
 🛍 Jaipur, Rajasthan  
 🌐 [GitHub Profile](https://github.com/JioRitik)
